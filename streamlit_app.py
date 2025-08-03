@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-API_URL = "https://memorygpt-backend.fly.dev/"  # Replace with your actual Fly.io backend URL
+API_URL = "https://memorygpt-backend.fly.dev/chat"  # Replace with your actual Fly.io backend URL
 
 import uuid
 
