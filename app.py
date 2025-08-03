@@ -15,7 +15,7 @@ if st.button("Send"):
 
         try:
             response = requests.post(
-                "https://memorygpt-backend.fly.dev",  # ✅ Correct port for FastAPI
+                "https://memorygpt-backend.fly.dev/chat",  # ✅ Correct port for FastAPI
                 json={"user_id": user_id, "message": message}
             )
             if response.status_code == 200:
