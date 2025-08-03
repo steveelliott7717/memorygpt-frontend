@@ -14,4 +14,9 @@ user_input = st.text_input("Ask MemoryGPT:")
 
 if user_input:
     response = requests.post(API_URL, json={"user_id": user_id, "message": user_input})
-    st.write(response.json())
+
+    try:
+        st.write(response.json())
+    except requests.exceptions.JSONDecodeError:
+        st.error("Backend returned invalid JSON.")
+        st.text(response.text)  # Print raw backend response for debugging
